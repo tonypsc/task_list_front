@@ -7,7 +7,7 @@ import estimationIcon from "../shared/assets/img/estimation.png";
 import todayIcon from "../shared/assets/img/today.png";
 import hightlightIcon from "../shared/assets/img/highlight.png";
 
-const ButtonBar = ({ handleClick }) => {
+const ButtonBar = ({ handleClick, active }) => {
   return (
     <div className="button-bar">
       <div className="button-group">
@@ -17,32 +17,46 @@ const ButtonBar = ({ handleClick }) => {
           picture={openIcon}
           highlighted
           handleClick={handleClick}
+          active={active}
         />
-        <Button caption="Today" picture={todayIcon} handleClick={handleClick} />
+        <Button
+          caption="Today"
+          picture={todayIcon}
+          handleClick={handleClick}
+          active={active}
+        />
         <Button
           caption="Public"
           picture={publicIcon}
           handleClick={handleClick}
+          active={active}
         />
         <Button
           caption="Highlight"
           picture={hightlightIcon}
           handleClick={handleClick}
+          active={active}
         />
         <Button
           caption="Estimation"
           picture={estimationIcon}
           handleClick={handleClick}
+          active={active}
         />
       </div>
       <div className="button-group">
         <Button
           caption="Cancel"
-          active="active"
+          active={true}
           highlighted
           handleClick={handleClick}
         />
-        <Button caption="Ok" active selected handleClick={handleClick} />
+        <Button
+          caption={active ? "Add" : "Ok"}
+          active={true}
+          selected
+          handleClick={handleClick}
+        />
       </div>
     </div>
   );

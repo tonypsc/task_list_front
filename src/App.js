@@ -1,7 +1,12 @@
 import "./App.css";
+import TaskWrapper from "./tasks/TaskWrapper";
 
 function App() {
-  return <div>Hello world!</div>;
+  return (
+    <div>
+      <TaskWrapper />
+    </div>
+  );
 }
 
 export default App;

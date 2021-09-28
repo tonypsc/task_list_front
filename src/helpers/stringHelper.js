@@ -9,7 +9,7 @@ const stringHelper = {
       hashes.forEach((element) => {
         newText = newText.replace(
           element,
-          `<span className="hash">${element}</span>`
+          `<span class="hash">${element}</span>`
         );
       });
     }
@@ -19,7 +19,7 @@ const stringHelper = {
       ats.forEach((element) => {
         newText = newText.replace(
           element,
-          `<span className="at">${element}</span>`
+          `<span class="at">${element}</span>`
         );
       });
     }
@@ -33,7 +33,7 @@ const stringHelper = {
       urls.forEach((element) => {
         newText = newText.replace(
           element,
-          `<span className="url">${element}</span>`
+          `<span class="url">${element}</span>`
         );
       });
     }
@@ -44,7 +44,7 @@ const stringHelper = {
       emails.forEach((element) => {
         newText = newText.replace(
           element,
-          `<span className="email">${element}</span>`
+          `<span class="email">${element}</span>`
         );
       });
     }

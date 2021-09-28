@@ -1,31 +1,50 @@
 .task {
-	display: flex;
-	margin: 0.25rem 0.5rem 1rem 0.5rem;
+  display: flex;
+  margin: 0.25rem 0.5rem 1rem 0.5rem;
+  flex: 1 1 auto;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+.transp-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: transparent;
+  caret-color: #000000;
+  width: 100%;
+  font-size: 12pt;
+  margin-left: 8px;
+  font-family: "Roboto";
 }
 
 .add-task {
-	outline: none;
-	margin: 0 0.5rem;
-	cursor: text;
+  outline: none;
+  margin: -20px 10px;
+  cursor: text;
+  font-size: 12pt;
+  font-family: "Roboto";
 }
 
 .add-task[placeholder]:empty:before {
-	content: attr(placeholder);
-	color: rgb(143, 143, 143);
+  content: attr(placeholder);
+  color: rgb(143, 143, 143);
 }
 
 .hash {
-	color: #702ee6;
+  color: #702ee6;
 }
 
 .at {
-	color: #38ff9c;
+  color: #38ff9c;
 }
 
 .email {
-	color: #ffb938;
+  color: #ffb938;
 }
 
 .url {
-	color: #4bb7ff;
+  color: #4bb7ff;
 }

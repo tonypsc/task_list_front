@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import AddTask from "./TaskInput";
+import React, { useState, useEffect } from "react";
+import TaskInput from "./TaskInput";
 import ButtonBar from "./ButtonBar";
 import "./EditTask.css";
 import avatar from "../shared/assets/img/avatar.png";
 
-const Task = () => {
+const EditTask = () => {
   const [selected, setSelected] = useState(false);
-  const [text, setText] = useState("dddd");
+  const [text, setText] = useState("");
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    setActive(text !== "");
+  }, [text]);
 
   const handleSelect = () => {
     setSelected(true);
@@ -21,12 +26,13 @@ const Task = () => {
       return;
     switch (button.textContent) {
       case "Ok":
-        setSelected(false);
+        cancelUpdate();
         break;
       case "Cancel":
         cancelUpdate();
         break;
-
+      case "Add":
+        break;
       default:
         break;
     }
@@ -37,26 +43,27 @@ const Task = () => {
    */
   const cancelUpdate = () => {
     setText("");
-    //setSelected(false);
+    setSelected(false);
   };
 
-  const handleChange = (value) => {
-    setText(value);
+  const handleChange = (e) => {
+    setText(e.target.value);
   };
 
   return (
     <div className={`tasks ${selected ? "active" : ""}`}>
       <div className="top-line">
-        <AddTask
+        <TaskInput
           handleSelect={handleSelect}
           text={text}
           handleChange={handleChange}
+          active=""
         />
         {selected && <img src={avatar} className="avatar" />}
       </div>
-      {selected && <ButtonBar handleClick={hanleClick} />}
+      {selected && <ButtonBar handleClick={hanleClick} active={active} />}
     </div>
   );
 };
 
-export default Task;
+export default EditTask;
