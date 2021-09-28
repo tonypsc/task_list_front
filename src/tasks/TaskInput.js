@@ -37,6 +37,7 @@ const TaskInput = ({ handleSelect, text, handleChange }) => {
           className="add-task"
           placeholder="Type to add a new task"
           onClick={handleClick}
+          // TODO: can be improved with dynamic components
           dangerouslySetInnerHTML={getTaggedHtml()}
         ></div>
       </div>

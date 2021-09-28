@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import TaskImput from "./TaskInput";
+import TaskItem from "./TaskItem";
 
-test("should render plus sign img", () => {
-  render(<TaskImput />);
-  expect(screen.getByAltText(/plus-sign/)).toBeInTheDocument();
+test("should render taggedText", () => {
+  render(<TaskItem taggedText="some text" />);
+  expect(screen.getByText(/some text/)).toBeInTheDocument();
 });

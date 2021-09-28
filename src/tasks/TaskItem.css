@@ -1,0 +1,23 @@
+.saved-hash {
+  color: #702ee6;
+  background: #dbc7ff;
+  border-radius: 10px;
+}
+
+.saved-at {
+  color: #38ff9c;
+  background: #adf0d9;
+  border-radius: 10px;
+}
+
+.saved-email {
+  color: #ffb938;
+  background: #ffe6c7;
+  border-radius: 10px;
+}
+
+.saved-url {
+  color: #4bb7ff;
+  background: #d6ebff;
+  border-radius: 10px;
+}
