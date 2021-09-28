@@ -1,0 +1,35 @@
+.button {
+	display: flex;
+	align-items: center;
+	border: 1px solid #e0e0e0;
+	background: transparent;
+	color: #8a94a6;
+	font-size: 11pt;
+	padding: 8px 20px;
+	border-radius: 3px;
+	margin: 0 2px;
+	opacity: 0.5;
+}
+
+.button-highlighted {
+	background: #eaf0f5;
+	color: #04142f;
+	border: none;
+}
+
+.button-selected {
+	background: #0d55cf;
+	color: #ffffff;
+	border: none;
+}
+
+.button img {
+	height: 20px;
+	width: 20px;
+	margin-right: 8px;
+}
+
+.button-active {
+	opacity: 1;
+	cursor: pointer;
+}
