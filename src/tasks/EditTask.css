@@ -1,0 +1,16 @@
+.top-line {
+	display: flex;
+	justify-content: space-between;
+	margin: 4px 6px;
+}
+.active {
+	border: 1px solid #f1f3f4;
+	border-radius: 4px;
+	box-shadow: 3px 4px 5px rgb(245, 245, 245);
+}
+
+.avatar {
+	opacity: 0.5;
+	height: 24px;
+	width: 24px;
+}
