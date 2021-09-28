@@ -1,0 +1,12 @@
+.button-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: #fafbfb;
+	border-top: 1px solid #e7ecef;
+	padding: 5px;
+}
+
+.button-group {
+	display: flex;
+}
