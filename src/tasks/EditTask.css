@@ -18,3 +18,7 @@
   height: 24px;
   width: 24px;
 }
+
+.avatar-active {
+  opacity: 1;
+}

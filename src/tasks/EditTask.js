@@ -32,6 +32,7 @@ const EditTask = () => {
         cancelUpdate();
         break;
       case "Add":
+        alert("aaaa");
         break;
       default:
         break;
@@ -39,7 +40,7 @@ const EditTask = () => {
   };
 
   /**
-   * Cancels current update operation
+   * Cancel current update operation
    */
   const cancelUpdate = () => {
     setText("");
@@ -59,7 +60,13 @@ const EditTask = () => {
           handleChange={handleChange}
           active=""
         />
-        {selected && <img src={avatar} className="avatar" />}
+        {selected && (
+          <img
+            src={avatar}
+            className={`avatar ${active && "avatar-active"}`}
+            alt=""
+          />
+        )}
       </div>
       {selected && <ButtonBar handleClick={hanleClick} active={active} />}
     </div>
