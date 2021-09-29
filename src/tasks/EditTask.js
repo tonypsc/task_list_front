@@ -4,7 +4,7 @@ import ButtonBar from "./ButtonBar";
 import "./EditTask.css";
 import avatar from "../shared/assets/img/avatar.png";
 
-const EditTask = () => {
+const EditTask = ({ handleUpdate }) => {
   const [selected, setSelected] = useState(false);
   const [text, setText] = useState("");
   const [active, setActive] = useState(false);
@@ -26,13 +26,15 @@ const EditTask = () => {
       return;
     switch (button.textContent) {
       case "Ok":
+      case "X":
         cancelUpdate();
         break;
       case "Cancel":
         cancelUpdate();
         break;
       case "Add":
-        alert("aaaa");
+      case "+":
+        if (handleUpdate(text)) cancelUpdate();
         break;
       default:
         break;

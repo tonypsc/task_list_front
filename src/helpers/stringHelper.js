@@ -61,7 +61,7 @@ const stringHelper = {
       hashes.forEach((element) => {
         newText = newText.replace(
           element,
-          `<a href="#" class="saved-hash">${element}</a>`
+          `<a href="#" class="tags saved-hash">${element}</a>`
         );
       });
     }
@@ -71,7 +71,7 @@ const stringHelper = {
       ats.forEach((element) => {
         newText = newText.replace(
           element,
-          `<a href="#" class="saved-at">${element}</a>`
+          `<a href="#" class="tags saved-at">${element}</a>`
         );
       });
     }
@@ -84,7 +84,7 @@ const stringHelper = {
       urls.forEach((element) => {
         newText = newText.replace(
           element,
-          `<a href="#" class="saved-url">${element}</a>`
+          `<a href="${element}" class="tags saved-url">Link</a>`
         );
       });
     }
@@ -95,7 +95,7 @@ const stringHelper = {
       emails.forEach((element) => {
         newText = newText.replace(
           element,
-          `<a href="#" class="saved-email">${element}</a>`
+          `<a href="mailto:${element}" class="tags saved-email">&#9993;Mail</a>`
         );
       });
     }

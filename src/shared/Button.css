@@ -1,35 +1,71 @@
 .button {
-	display: flex;
-	align-items: center;
-	border: 1px solid #e0e0e0;
-	background: transparent;
-	color: #8a94a6;
-	font-size: 11pt;
-	padding: 8px 20px;
-	border-radius: 3px;
-	margin: 0 2px;
-	opacity: 0.5;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  color: #8a94a6;
+  font-size: 11pt;
+  padding: 8px 20px;
+  border-radius: 3px;
+  margin: 0 2px;
+  opacity: 0.5;
 }
 
 .button-highlighted {
-	background: #eaf0f5;
-	color: #04142f;
-	border: none;
+  background: #eaf0f5;
+  color: #04142f;
+  border: none;
 }
 
 .button-selected {
-	background: #0d55cf;
-	color: #ffffff;
-	border: none;
+  background: #0d55cf;
+  color: #ffffff;
+  border: none;
 }
 
 .button img {
-	height: 20px;
-	width: 20px;
-	margin-right: 8px;
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
 }
 
 .button-active {
-	opacity: 1;
-	cursor: pointer;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1230px) {
+  .button {
+    border: none;
+    padding: 8px 10px;
+  }
+  .cancel-button {
+    display: none;
+  }
+
+  .add-button {
+    font-size: 0;
+  }
+
+  .add-button:after {
+    content: "+";
+    font-size: 12pt;
+  }
+
+  .ok-button {
+    font-size: 0;
+  }
+
+  .ok-button::after {
+    content: "X";
+    font-size: 12pt;
+  }
+
+  .button-caption {
+    display: none;
+  }
+
+  .button img {
+    margin-right: 0;
+  }
 }

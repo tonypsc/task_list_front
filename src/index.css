@@ -1,5 +1,12 @@
 :root {
-  --main-color: #ffffff;
+  --hash-color: #702ee6;
+  --at-color: #07a873;
+  --email-color: #f58e0a;
+  --url-color: #007fff;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {

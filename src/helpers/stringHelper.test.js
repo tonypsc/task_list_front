@@ -35,27 +35,27 @@ describe("getSavedTags", () => {
     expect(stringHelper.getSavedTags()).toBe("");
   });
 
-  test("shoud return span tags for # tag", () => {
+  test("shoud return a tags for # tag", () => {
     expect(stringHelper.getSavedTags("some #text")).toMatch(
-      'some<a href="#" class="saved-hash"> #text</a>'
+      'some<a href="#" class="tags saved-hash"> #text</a>'
     );
   });
 
-  test("shoud return span tags for @ tag", () => {
+  test("shoud return a tags for @ tag", () => {
     expect(stringHelper.getSavedTags("some @text")).toMatch(
-      'some<a href="#" class="saved-at"> @text</a>'
+      'some<a href="#" class="tags saved-at"> @text</a>'
     );
   });
 
-  test("shoud return span tags for email", () => {
+  test("shoud return a tags for email", () => {
     expect(stringHelper.getSavedTags("just some@email.com")).toMatch(
-      'just<a href="#" class="saved-email"> some@email.com</a>'
+      'just<a href="mailto: some@email.com" class="tags saved-email">'
     );
   });
 
-  test("shoud return span tags for url", () => {
+  test("shoud return a tags for url", () => {
     expect(stringHelper.getSavedTags("visit www.myurl.com")).toMatch(
-      'visit<a href="#" class="saved-url"> www.myurl.com</a>'
+      'visit<a href=" www.myurl.com" class="tags saved-url">Link</a>'
     );
   });
 });

@@ -34,17 +34,17 @@
 }
 
 .hash {
-  color: #702ee6;
+  color: var(--hash-color);
 }
 
 .at {
-  color: #38ff9c;
+  color: var(--at-color);
 }
 
 .email {
-  color: #ffb938;
+  color: var(--email-color);
 }
 
 .url {
-  color: #4bb7ff;
+  color: var(--url-color);
 }

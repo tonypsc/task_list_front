@@ -1,23 +1,41 @@
-.saved-hash {
-  color: #702ee6;
-  background: #dbc7ff;
+.task-row {
+  display: flex;
+  margin-left: 13px;
+  margin-top: 10px;
+  font-size: 11pt;
+}
+
+.item-check {
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  margin-right: 8px;
+}
+
+.tags {
   border-radius: 10px;
+  padding: 1px 6px;
+  margin: 0 4px;
+}
+
+.saved-hash {
+  color: var(--hash-color);
+  background: #dbc7ff;
 }
 
 .saved-at {
-  color: #38ff9c;
+  color: var(--at-color);
   background: #adf0d9;
-  border-radius: 10px;
 }
 
 .saved-email {
-  color: #ffb938;
+  color: var(--email-color);
   background: #ffe6c7;
-  border-radius: 10px;
 }
 
 .saved-url {
-  color: #4bb7ff;
+  color: var(--url-color);
   background: #d6ebff;
-  border-radius: 10px;
 }
